@@ -22,3 +22,5 @@ export const CarCarousel = ({cars}) => {
       </Swiper>
   )
 }
+export const dynamic = 'force-dynamic'
+

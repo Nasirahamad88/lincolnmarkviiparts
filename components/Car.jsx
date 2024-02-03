@@ -24,5 +24,6 @@ const Car = ({ car }) => {
     </div>
   )
 }
+export const dynamic = 'force-dynamic'
 
 export default Car

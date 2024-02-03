@@ -7,4 +7,7 @@ export default function Home() {
       <PopulerCar/>
     </div>
   );
+  
 }
+export const dynamic = 'force-dynamic'
+
