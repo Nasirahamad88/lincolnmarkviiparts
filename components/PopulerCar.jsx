@@ -1,7 +1,7 @@
 import { client } from '@/app/lib/sanity'
 import React from 'react'
 import { CarCarousel } from './CarCarousel'
-// import Image from 'next/image'
+
 import { urlFor } from "@/app/lib/sanity"
 
 const getData = async () => {
@@ -25,7 +25,7 @@ const getData = async () => {
 const PopulerCar =async () => {
 
   const cars = await getData()
-  // console.log(cars)
+  
   return (
     <div className='py-10 space-y-7 '>
       
