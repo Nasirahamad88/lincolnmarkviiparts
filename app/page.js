@@ -1,10 +1,14 @@
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import PopulerCar from "@/components/PopulerCar";
 
 
 export default function Home() {
   return (
-    <div className="w-[80%] mx-auto">
-      <PopulerCar/>
+    <div className="">
+      <Hero/>
+      <PopulerCar />
+      <Footer/>
     </div>
   );
   

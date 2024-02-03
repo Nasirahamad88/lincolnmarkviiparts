@@ -13,7 +13,7 @@ const Car = ({ car }) => {
     
   return (
       <div>
-          <div className="h-[328px] mb-5 p-4 relative">
+          <div className="h-[328px] mb-5 p-4 relative  items-center">
               <Image
                   src={urlFor(car.images[0]).url()}
                   width={240}

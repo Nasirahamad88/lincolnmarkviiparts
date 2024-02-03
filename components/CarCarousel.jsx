@@ -8,9 +8,10 @@ import {Pagination } from 'swiper/modules'
 import Car from './Car';
 
 export const CarCarousel = ({cars}) => {
-    console.log(cars)
-  return (
-      <Swiper>
+    
+    return (
+        <div className='w-[30%] mx-auto'>
+             <Swiper>
           {cars.map((car) => {
               console.log(car)
               return <SwiperSlide key={car._id}>
@@ -20,6 +21,8 @@ export const CarCarousel = ({cars}) => {
               
           })}
       </Swiper>
+      </div>
+     
   )
 }
 export const dynamic = 'force-dynamic'
