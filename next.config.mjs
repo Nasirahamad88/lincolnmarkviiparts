@@ -2,7 +2,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['cdn.sanity.io'], // Allowed image domain
+    domains: ['cdn.sanity.io',"via.placeholder.com"], // Allowed image domain
   },
 };
 

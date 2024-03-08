@@ -1,23 +1,21 @@
 import { client } from "@/app/lib/sanity";
 import React from "react";
-import { CarCarousel } from "./CarCarousel";
+
 import Link from "next/link";
 import { urlFor } from "@/app/lib/sanity";
 import Image from "next/image";
+import { CarCarousel } from "@/components/CarCarousel";
 
-const getData = async () => {
-  
-  const fullQuery = `*[_type == 'product']`;
-  const data = await client.fetch(fullQuery);
-  return data;
-};
-console.log(getData);
-const PopulerCar = async () => {
-  const cars = await getData();
+
+
+const Car = async ({ cars }) => {
+ 
 
   return (
     <div className="py-10 space-y-7 w-[80%] mx-auto">
       <CarCarousel cars={cars} />
+      <h1 className="text-4xl font-bold text-gray-900 text-center justify-center py-5 hover:underline-offset-auto ">Our Products</h1>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cars.map((car) => (
           <div
@@ -40,7 +38,7 @@ const PopulerCar = async () => {
                 <span className="text-green-500 font-semibold">
                   {car.price}
                 </span>
-                <Link href={`/${car._id}`}>
+                <Link href={`/allproducts/${car.slug.current}`}>
                   <button className="px-3 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">
                     Add to Cart
                   </button>
@@ -55,4 +53,4 @@ const PopulerCar = async () => {
 };
 export const dynamic = "force-dynamic";
 
-export default PopulerCar;
+export default Car;

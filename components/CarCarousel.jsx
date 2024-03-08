@@ -10,20 +10,18 @@ import Car from './Car';
 export const CarCarousel = ({cars}) => {
     
     return (
-        <div className='w-[30%] mx-auto'>
-             <Swiper>
+      <div className="h-64 w-[20%] mx-auto mb-5 ">
+        <Swiper>
           {cars.map((car) => {
-              console.log(car)
-              return <SwiperSlide key={car._id}>
-                  
-                  <Car car={ car} />
+            return (
+              <SwiperSlide key={car._id}>
+                <Car car={car} />
               </SwiperSlide>
-              
+            );
           })}
-      </Swiper>
+        </Swiper>
       </div>
-     
-  )
+    );
 }
 export const dynamic = 'force-dynamic'
 

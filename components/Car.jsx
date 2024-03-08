@@ -12,17 +12,17 @@ const Car = ({ car }) => {
     )
     
   return (
-      <div>
-          <div className="h-[328px] mb-5 p-4 relative  items-center">
-              <Image
-                  src={urlFor(car.images[0]).url()}
-                  width={240}
-                  height={147}
-                  alt='car parts'
-              />
-          </div>
+    <div>
+      <div className="h-[228px] rounded-lg w-auto mb-5 relative flex items-center justify-center bg-slate-100">
+        <Image
+          src={urlFor(car.images[0]).url()}
+          width={240}
+          height={147}
+          alt="car parts"
+        />
+      </div>
     </div>
-  )
+  );
 }
 export const dynamic = 'force-dynamic'
 
